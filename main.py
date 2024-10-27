@@ -1,5 +1,6 @@
 import time
 import random
+import pandas as pd
 import matplotlib.pyplot as plt
 from bubble_sort import bubble_sort
 from bubble_melhorado import bubble_sort_melhorado
@@ -95,7 +96,7 @@ def main():
     orders = ['random', 'ascending', 'descending']
 
     # Dicionário para armazenar os resultados de tempo para cada tipo de ordenação
-    results = {order: [] for order in orders}
+    results = []
 
     # Testa o algoritmo escolhido com diferentes tamanhos e ordens de dados
     for order in orders:
@@ -107,13 +108,20 @@ def main():
             # Mede o tempo de execução
             time_taken = measure_time(algorithm_fn, arr)
 
-            results[order].append(time_taken)
+            results.append({"Ordem": order, "Tamanho": size, "Tempo": time_taken})
             print(f"Tamanho: {size}, Tempo: {time_taken:.6f} segundos")
+
+    # Gera o dataframe para análise posterior
+    df_results = pd.DataFrame(results)
+
+    # Ao invés de printar, vou colocar em um arquivo csv
+    print(df_results)
 
     # Geração do gráfico de desempenho
     plt.figure(figsize=(10, 6))
     for order in orders:
-        plt.plot(sizes, results[order], label=f'Dados {order}')
+        order_data = df_results[df_results["Ordem"] == order]
+        plt.plot(order_data["Tamanho"], order_data["Tempo"], label=f'Dados {order}')
 
     plt.title(f'Comparação de Desempenho - {algorithm_name}')
     plt.xlabel('Tamanho do vetor')
