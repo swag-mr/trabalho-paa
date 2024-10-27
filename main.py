@@ -3,7 +3,7 @@ import random
 import matplotlib.pyplot as plt
 from bubble_sort import bubble_sort
 from bubble_melhorado import bubble_sort_melhorado
-# from quick_sort_inicio import quick_sort_inicio
+from quick_sort_inicio import quick_sort_inicio
 from quick_sort_meio import quick_sort_meio
 from insertion_sort import insertion_sort
 from shell_sort import shell_sort
@@ -65,7 +65,7 @@ def main():
     algorithms = {
         '1': ('Bubble Sort', bubble_sort),
         '2': ('Bubble Sort Melhorado', bubble_sort_melhorado),
-        # '3': ('Quick Sort (Início)', quick_sort_inicio),
+        '3': ('Quick Sort (Início)', quick_sort_inicio),
         '4': ('Quick Sort (Meio)', quick_sort_meio),
         '5': ('Insertion Sort', insertion_sort),
         '6': ('Shell Sort', shell_sort),
@@ -90,10 +90,8 @@ def main():
     print(f"Você escolheu: {algorithm_name}")
 
     # Tamanhos de vetores a serem testados
-    # sizes = [1000, 5000, 10000, 15000, 20000, 25000]
+    sizes = [1000, 5000, 10000, 15000, 20000, 25000]
 
-
-    sizes = [1000, 5000, 10000, 15000]
     # Tipos de ordenação dos dados
     orders = ['random', 'ascending', 'descending']
 

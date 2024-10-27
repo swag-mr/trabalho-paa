@@ -36,14 +36,3 @@ def quick_sort_inicio(vetor, p, r):
 
             stack.append(q+1)
             stack.append(temp_end)
-
-x = random.sample(range(5500000),5500000)
-
-y = [i for i in range(100000)]
-
-inicio = default_timer()
-quick_sort_inicio(x, 0, len(x)-1)
-#quickSortInicio(y, 0, len(y)-1)
-fim = default_timer()
-
-print(f"Tempo: {fim - inicio}")

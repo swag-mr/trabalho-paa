@@ -31,9 +31,6 @@ def merge(vetor, esq, q, di):
 def merge_sort(vetor):
     n = len(vetor)
 
-    # A pilha armazenará as tuplas (esq, q, di) a serem mescladas
-    # pilha = []
-
     # Subdivide o vetor em partes cada vez menores
     sublista_tamanho = 1
     while sublista_tamanho < n:
