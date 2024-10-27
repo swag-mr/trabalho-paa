@@ -1,5 +1,5 @@
-def insertion_sort(vetor, n):
-    for k in range(1, n):
+def insertion_sort(vetor):
+    for k in range(1, len(vetor)):
         y = vetor[k]
         i = k-1
         while(i >= 0 and vetor[i] > y):
