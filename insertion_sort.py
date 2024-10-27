@@ -1,4 +1,4 @@
-def insertionSort(vetor, n):
+def insertion_sort(vetor, n):
     for k in range(1, n):
         y = vetor[k]
         i = k-1
@@ -6,8 +6,3 @@ def insertionSort(vetor, n):
             vetor[i+1] = vetor[i]
             i -= 1
         vetor[i+1] = y
-
-x = [5,1,3,5,9,10,-1,110]
-insertionSort(x, len(x))
-
-print(x)

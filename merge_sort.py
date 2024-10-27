@@ -28,17 +28,11 @@ def merge(vetor, esq, q, di):
     while j < len(direita):
         vetor[k] = direita[j]
         j += 1
-        k += 1 
+        k += 1
 
-def mergeSort(vetor, esq, di):
+def merge_sort(vetor, esq, di):
     if esq < di:
         q =  math.floor((esq+di)/2)
-        mergeSort(vetor, esq, q)
-        mergeSort(vetor, q+1, di)
+        merge_sort(vetor, esq, q)
+        merge_sort(vetor, q+1, di)
         merge(vetor, esq, q, di)
-
-x = [5,1,3,5,9,10,-1,110]
-
-mergeSort(x, 0, len(x)-1)
-
-print(x)

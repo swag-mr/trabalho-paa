@@ -1,9 +1,9 @@
 def particao(vetor, p, r):
     meio = (p + r) // 2
     pivo = vetor[meio]
-    
+
     vetor[meio], vetor[r] = vetor[r], vetor[meio]
-    
+
     up = r - 1
     down = p
     while down <= up:
@@ -17,14 +17,8 @@ def particao(vetor, p, r):
     vetor[r], vetor[down] = vetor[down], vetor[r]
     return down
 
-def quickSortMeio(vetor, p, r):
+def quick_sort_meio(vetor, p, r):
     if p < r:
         q = particao(vetor, p, r)
-        quickSortMeio(vetor, p, q - 1)
-        quickSortMeio(vetor, q + 1, r)
-
-x = [5, 1, 3, 5, 9, 10, -1, 110]
-
-quickSortMeio(x, 0, len(x) - 1)
-
-print(x)
+        quick_sort_meio(vetor, p, q - 1)
+        quick_sort_meio(vetor, q + 1, r)

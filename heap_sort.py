@@ -12,7 +12,7 @@ def heapify(vetor, n, i):
     if maior != i:
         (vetor[i], vetor[maior]) = (vetor[maior], vetor[i])
 
-def heapSort(vetor):
+def heap_sort(vetor):
     n = len(vetor)
 
     for i in range(n // 2, -1, -1):
@@ -21,8 +21,3 @@ def heapSort(vetor):
     for i in range(n-1, 0, -1):
         (vetor[i], vetor[0]) = (vetor[0], vetor[i])
         heapify(vetor, i, 0)
-
-x = [5,1,3,5,9,10,-1,110, 200]
-heapSort(x)
-
-print(x)
