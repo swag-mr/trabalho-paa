@@ -1,6 +1,3 @@
-from timeit import default_timer
-import random
-
 def particao(vetor, p, r):
     pivo = vetor[p]
     up = r
