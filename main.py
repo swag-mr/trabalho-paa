@@ -68,8 +68,7 @@ def main():
         '3': ('Quick Sort (Início)', quick_sort_inicio),
         '4': ('Quick Sort (Meio)', quick_sort_meio),
         '5': ('Insertion Sort', insertion_sort),
-        '6': ('Shell Sort', shell_sort),
-        '7': ('Selection Sort', selection_sort),
+        '6': ('Shell Sort', shell_sort), '7': ('Selection Sort', selection_sort),
         '8': ('Heap Sort', heap_sort),
         '9': ('Merge Sort', merge_sort)
     }

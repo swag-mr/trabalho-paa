@@ -4,24 +4,20 @@ def particao(vetor, p, r):
     down = p
     while down < up:
         while down < r and vetor[down] <= pivo:
-            down = down+1
+            down += 1
         while up > p and vetor[up] > pivo:
-            up = up-1
+            up -= 1
         if down < up:
-            aux = vetor[down]
-            vetor[down] = vetor[up]
-            vetor[up] = aux
-    vetor[p] = vetor[up]
-    vetor[up] = pivo
+            vetor[down], vetor[up] = vetor[up], vetor[down]
+    vetor[p], vetor[up] = vetor[up], pivo
     return up
 
-def quick_sort_inicio(vetor, p, r):
-    stack = []
+def quick_sort_inicio(vetor):
+    p = 0
+    r = len(vetor) - 1
+    stack = [p, r]
 
-    stack.append(p)
-    stack.append(r)
-
-    while len(stack) != 0:
+    while stack:
         temp_end = stack.pop()
         temp_ini = stack.pop()
 
@@ -29,7 +25,8 @@ def quick_sort_inicio(vetor, p, r):
             q = particao(vetor, temp_ini, temp_end)
 
             stack.append(temp_ini)
-            stack.append(q-1)
+            stack.append(q - 1)
 
-            stack.append(q+1)
+            stack.append(q + 1)
             stack.append(temp_end)
+
