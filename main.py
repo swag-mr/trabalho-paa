@@ -2,6 +2,7 @@ import time
 import random
 import pandas as pd
 import matplotlib.pyplot as plt
+from scipy.ndimage import gaussian_filter1d
 from bubble_sort import bubble_sort
 from bubble_melhorado import bubble_sort_melhorado
 from quick_sort_inicio import quick_sort_inicio
@@ -121,7 +122,8 @@ def main():
     plt.figure(figsize=(10, 6))
     for order in orders:
         order_data = df_results[df_results["Ordem"] == order]
-        plt.plot(order_data["Tamanho"], order_data["Tempo"], label=f'Dados {order}')
+        smooth_time = gaussian_filter1d(order_data["Tempo"], sigma=1)
+        plt.plot(order_data["Tamanho"], smooth_time, label=f'Dados {order}')
 
     plt.title(f'Comparação de Desempenho - {algorithm_name}')
     plt.xlabel('Tamanho do vetor')
@@ -136,4 +138,3 @@ def main():
 # com o usuário e realizar os testes de desempenho.
 if __name__ == "__main__":
     main()
-
