@@ -91,7 +91,7 @@ def main():
     print(f"Você escolheu: {algorithm_name}")
 
     # Tamanhos de vetores a serem testados
-    sizes = [1000, 5000, 10000, 15000, 20000, 25000]
+    sizes = [1000, 5000, 10000, 15000, 20000, 25000, 30000]
 
     # Tipos de ordenação dos dados
     orders = ['random', 'ascending', 'descending']
@@ -115,8 +115,8 @@ def main():
     # Gera o dataframe para análise posterior
     df_results = pd.DataFrame(results)
 
-    # Ao invés de printar, vou colocar em um arquivo csv
-    print(df_results)
+    # Armazeno em um arquivo csv com o nome do algoritmo
+    df_results.to_csv(f'{algorithm_name}.csv')
 
     # Geração do gráfico de desempenho
     plt.figure(figsize=(10, 6))
@@ -132,9 +132,5 @@ def main():
     plt.grid(True)
     plt.show()
 
-# Ponto de entrada do programa
-# -------------------------------------
-# Quando o script é executado, ele chama a função `main` para iniciar a interação
-# com o usuário e realizar os testes de desempenho.
 if __name__ == "__main__":
     main()
