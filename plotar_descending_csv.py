@@ -5,12 +5,12 @@ from scipy.ndimage import gaussian_filter1d
 # rodar todos os arquivos csv e plotar em uma imagem só
 algorithms = [
     'Bubble Sort',
-    # 'Bubble Sort Melhorado',
-    # 'Quick Sort (Início)',
-    # 'Quick Sort (Meio)',
-    # 'Insertion Sort',
-    # 'Shell Sort',
-    # 'Selection Sort',
+    'Bubble Sort Melhorado',
+    'Quick Sort (Início)',
+    'Quick Sort (Meio)',
+    'Insertion Sort',
+    'Shell Sort',
+    'Selection Sort',
     'Heap Sort',
     'Merge Sort'
 ]

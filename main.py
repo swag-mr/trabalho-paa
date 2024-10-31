@@ -11,9 +11,7 @@ from insertion_sort import insertion_sort
 from shell_sort import shell_sort
 from selection_sort import selection_sort
 from heap_sort import heap_sort
-from merge_sort import merge_sort
-
-# Função para medir o tempo de execução
+from merge_sort import merge_sort # Função para medir o tempo de execução
 # -------------------------------------
 # Esta função mede o tempo que um algoritmo de ordenação leva para ordenar
 # uma cópia do array dado. Ela retorna o tempo total de execução em segundos.
@@ -70,7 +68,8 @@ def main():
         '3': ('Quick Sort (Início)', quick_sort_inicio),
         '4': ('Quick Sort (Meio)', quick_sort_meio),
         '5': ('Insertion Sort', insertion_sort),
-        '6': ('Shell Sort', shell_sort), '7': ('Selection Sort', selection_sort),
+        '6': ('Shell Sort', shell_sort),
+        '7': ('Selection Sort', selection_sort),
         '8': ('Heap Sort', heap_sort),
         '9': ('Merge Sort', merge_sort)
     }
