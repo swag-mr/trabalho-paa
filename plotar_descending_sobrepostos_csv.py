@@ -9,7 +9,7 @@ algorithms = [
     # 'Quick Sort (Início)',
     'Quick Sort (Meio)',
     # 'Insertion Sort',
-    'Shell Sort',
+    # 'Shell Sort',
     # 'Selection Sort',
     'Heap Sort',
     'Merge Sort'
