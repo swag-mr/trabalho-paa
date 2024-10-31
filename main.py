@@ -3,15 +3,17 @@ import random
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
-from bubble_sort import bubble_sort
-from bubble_melhorado import bubble_sort_melhorado
-from quick_sort_inicio import quick_sort_inicio
-from quick_sort_meio import quick_sort_meio
-from insertion_sort import insertion_sort
-from shell_sort import shell_sort
-from selection_sort import selection_sort
-from heap_sort import heap_sort
-from merge_sort import merge_sort # Função para medir o tempo de execução
+from algoritmos.bubble_sort import bubble_sort
+from algoritmos.bubble_melhorado import bubble_sort_melhorado
+from algoritmos.quick_sort_inicio import quick_sort_inicio
+from algoritmos.quick_sort_meio import quick_sort_meio
+from algoritmos.insertion_sort import insertion_sort
+from algoritmos.shell_sort import shell_sort
+from algoritmos.selection_sort import selection_sort
+from algoritmos.heap_sort import heap_sort
+from algoritmos.merge_sort import merge_sort
+
+# Função para medir o tempo de execução
 # -------------------------------------
 # Esta função mede o tempo que um algoritmo de ordenação leva para ordenar
 # uma cópia do array dado. Ela retorna o tempo total de execução em segundos.
@@ -115,7 +117,7 @@ def main():
     df_results = pd.DataFrame(results)
 
     # Armazeno em um arquivo csv com o nome do algoritmo
-    df_results.to_csv(f'{algorithm_name}.csv')
+    df_results.to_csv(f'./csvs/{algorithm_name}.csv')
 
     # Geração do gráfico de desempenho
     plt.figure(figsize=(10, 6))

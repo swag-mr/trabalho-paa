@@ -27,7 +27,7 @@ print(f"Você escolheu: {algorithm_name}")
 # Tipos de ordenação dos dados
 orders = ['random', 'ascending', 'descending']
 
-df_plot = pd.read_csv(f'{algorithm_name}.csv')
+df_plot = pd.read_csv(f'./csvs/{algorithm_name}.csv')
 # Geração do gráfico de desempenho
 plt.figure(figsize=(10, 6))
 for order in orders:

@@ -16,7 +16,7 @@ algorithms = [
 ]
 
 for i in range(len(algorithms)):
-    df_plot = pd.read_csv(f'{algorithms[i]}.csv')
+    df_plot = pd.read_csv(f'./csvs/{algorithms[i]}.csv')
     order_data = df_plot[df_plot["Ordem"] == 'random']
     smooth_time = gaussian_filter1d(order_data["Tempo"], sigma=1)
     plt.plot(order_data["Tamanho"], smooth_time, label=f'{algorithms[i]}')
