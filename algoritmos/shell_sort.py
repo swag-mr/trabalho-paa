@@ -8,7 +8,6 @@ def shell_sort(vetor):
         numIncrementos += 1
 
     numIncrementos -= 1
-    print(incrementos)
 
     for i in range(0, numIncrementos):
         span = incrementos[i]
