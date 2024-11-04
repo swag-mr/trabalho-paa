@@ -35,7 +35,7 @@ for order in orders:
     smooth_time = gaussian_filter1d(order_data["Tempo"], sigma=1)
     plt.plot(order_data["Tamanho"], smooth_time, label=f'Dados {order}')
 
-plt.title('Comparação de Desempenho - Dados Ascending')
+plt.title(f'Comparação de Desempenho - {algorithm_name}')
 plt.xlabel('Tamanho do vetor')
 plt.ylabel('Tempo (segundos)')
 plt.legend()
